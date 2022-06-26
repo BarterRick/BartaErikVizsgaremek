@@ -12,6 +12,7 @@ public class RegisterPage {
     private final By emailRegInput = By.id("register-email");
     private final By descriptionInput = By.id("register-description");
     private final By registerButton = By.xpath("//*[@class=\"form\"]//button[text()=\"Register\"]");
+    private final By message = By.id("register-alert");
 
     public void SwitchToLoginForm()
     {
@@ -42,5 +43,10 @@ public class RegisterPage {
     {
         WebElement submitButton = driver.findElement(registerButton);
         submitButton.click();
+    }
+    public void GetMessageText()
+    {
+        WebElement messageText = driver.findElement(message);
+        messageText.getText();
     }
 }

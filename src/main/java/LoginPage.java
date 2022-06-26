@@ -16,6 +16,7 @@ public class LoginPage {
 
 
 
+
     public void Navigate() { driver.navigate().to(url); }
 
     public void AcceptTerms()
