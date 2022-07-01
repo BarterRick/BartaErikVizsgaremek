@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,7 @@ public class TestRegistration extends TestSetup{
 
     @Test
     @DisplayName("Regisztráció fájlból beolvasott adatokkal")
+    @Severity(SeverityLevel.BLOCKER)
     public void RegistrationFromFileTest() throws Exception
     {
         login.Navigate();
@@ -24,6 +27,7 @@ public class TestRegistration extends TestSetup{
     }
     @Test
     @DisplayName("Regisztráció manuálisan beírt adatokkal")
+    @Severity(SeverityLevel.BLOCKER)
     public void RegistrationTest()
     {
         login.Navigate();

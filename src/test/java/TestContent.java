@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -23,6 +25,7 @@ public class TestContent extends TestSetup{
 
     @Test
     @DisplayName("Bejegyzések számának ellenőrzése")
+    @Severity(SeverityLevel.MINOR)
     public void CheckContentNumberTest()
     {
         Integer actual = landing.GetArticleNumber();
@@ -30,6 +33,7 @@ public class TestContent extends TestSetup{
     }
     @Test
     @DisplayName("Oldal lapozás tesztelése")
+    @Severity(SeverityLevel.NORMAL)
     public void CheckSecondPageTest()
     {
         landing.SelectSecondPage();
@@ -38,6 +42,7 @@ public class TestContent extends TestSetup{
     }
     @Test
     @DisplayName("Bejegyzés címének ellenőrzése")
+    @Severity(SeverityLevel.NORMAL)
     public void CheckFirstArticleTitle() throws Exception
     {
         landing.SaveFirstArticleTitleToFile();
@@ -46,6 +51,7 @@ public class TestContent extends TestSetup{
     }
     @Test
     @DisplayName("Profil módosítása")
+    @Severity(SeverityLevel.NORMAL)
     public void ProfileEditTest()
     {
     landing.GoToProfilePage();
@@ -55,6 +61,7 @@ public class TestContent extends TestSetup{
     }
     @Test
     @DisplayName("Kijelentkezés")
+    @Severity(SeverityLevel.CRITICAL)
     public void Logout()
     {
         landing.Logout();
@@ -63,6 +70,7 @@ public class TestContent extends TestSetup{
     }
     @Test
     @DisplayName("Profil törlése")
+    @Severity(SeverityLevel.CRITICAL)
     public void DeleteProfile()
     {
         landing.GoToProfilePage();

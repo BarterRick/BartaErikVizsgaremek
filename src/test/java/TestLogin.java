@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,7 @@ public class TestLogin extends TestSetup{
 
     @Test
     @DisplayName("Belépés regisztráció nélkül")
+    @Severity(SeverityLevel.CRITICAL)
     public void LoginWithoutRegistrationTest()
     {
         login.Navigate();
@@ -22,6 +25,7 @@ public class TestLogin extends TestSetup{
     }
     @Test
     @DisplayName("Belépés jelszó nélkül")
+    @Severity(SeverityLevel.CRITICAL)
     public void LoginWithoutPasswordTest()
     {
         login.Navigate();
@@ -34,6 +38,7 @@ public class TestLogin extends TestSetup{
     }
     @Test
     @DisplayName("Belépés valós adatokkal")
+    @Severity(SeverityLevel.BLOCKER)
     public void LoginTest()throws Exception
     {
         login.Navigate();
