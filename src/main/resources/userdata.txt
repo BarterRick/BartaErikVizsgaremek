@@ -1,0 +1,4 @@
+username: tesztelek
+password: tesztpw
+email: teszt@tesztmail.hu
+description: felhasználó a teszteléshez
